@@ -20,5 +20,7 @@ if [ ! -d /jepsen ]; then
     git clone git@github.com:jepsen-io/redis.git /jepsen
     cd /jepsen
     lein install
-    lein run serve
 fi
+
+cd /jepsen
+lein run serve
