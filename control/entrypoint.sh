@@ -16,9 +16,9 @@ if [ -n "$KNOWN_HOSTS" ]; then
   chmod 0600 /root/.ssh/known_hosts
 fi
 
-cd /work
-git clone git@github.com:jepsen-io/redis.git 
-
-cd redis
-lein install
-lein run serve
+if [ ! -d /jepsen ]; then
+    git clone git@github.com:jepsen-io/redis.git /jepsen
+    cd /jepsen
+    lein install
+    lein run serve
+fi
