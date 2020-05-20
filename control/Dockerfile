@@ -10,7 +10,8 @@ RUN apt-get -y -q update && \
         git \
         gnuplot \
         wget \
-	vim
+	vim \
+        graphviz
 
 ENV LEIN_ROOT true
 RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && \
