@@ -19,7 +19,7 @@ variable "aws_az" {
 }
 
 variable "aws_instance_type" {
-  default = "t2.micro"
+  default = "m5.large"
 }
 
 variable "aws_volume_type" {
