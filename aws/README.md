@@ -1,4 +1,4 @@
-# Jepsen/AWS Terraform scripts
+# RedisRaft/Jepsen Tests on AWS
 
 This is a Terraform script to launch a Jepsen test environment on AWS.
 It launches and configures 5 cluster test nodes and one control node.
