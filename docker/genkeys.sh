@@ -1,4 +1,5 @@
 #!/bin/bash
+[ -d ./secret ] || mkdir secret
 if [ -f ./secret/id_rsa ]; then
   echo "Keys already created; rm ./secret/* to recreate!"
   exit 1
