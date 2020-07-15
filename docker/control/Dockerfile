@@ -19,6 +19,10 @@ RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
     chmod +x /usr/bin/lein && \
     lein self-install
 
+RUN git clone https://github.com/jepsen-io/redis /jepsen && \
+    cd /jepsen && \
+    lein install
+
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod 0755 /entrypoint.sh
 

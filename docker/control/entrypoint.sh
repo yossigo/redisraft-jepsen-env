@@ -10,14 +10,12 @@ if [ -n "$PRIVATE_KEY" ]; then
   chmod 0600 /root/.ssh/id_rsa
 fi
 
-if [ -n "$KNOWN_HOSTS" ]; then
-  echo "$KNOWN_HOSTS" | sed 's/\\n/\
+echo "$KNOWN_HOSTS" | sed 's/\\n/\
 /g' > /root/.ssh/known_hosts
-  chmod 0600 /root/.ssh/known_hosts
-fi
+chmod 0600 /root/.ssh/known_hosts
 
 if [ ! -d /jepsen ]; then
-    git clone git@github.com:jepsen-io/redis.git /jepsen
+    git clone https://github.com/jepsen-io/redis /jepsen
     cd /jepsen
     lein install
 fi
