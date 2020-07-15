@@ -38,6 +38,11 @@ RUN apt-get update && \
         wget \
 	tcpdump \
 	git \
+        cmake \
+        automake \
+        autoconf \
+        libtool \
+        libbsd-dev \
         && \
         apt-get remove -y --purge --auto-remove systemd
 
